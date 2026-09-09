@@ -84,7 +84,7 @@ def display_amount_of_buyers(amnt_displayed):
 if __name__ == "__main__":
 
     #Creates a variable to return the amount of buyers to
-    amount_of_buyers = ticket_sale_loop(20, 4)
+    amount_of_buyers = ticket_sale_loop(10, 4)
 
     #Displays to user the amount of buyers
     display_amount_of_buyers(amount_of_buyers)
