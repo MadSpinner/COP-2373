@@ -35,7 +35,7 @@ def ticket_sale_loop(tickets_in_stock, tickets_per_buyer):
 
         #tries an input statement. If there is a ValueError it notifies the user and asks the input statement again.
         try:
-            tickets_bought = int(input(f'Please input the amount of tickets being bought. Make sure not to exceed the limit of {tickets_per_buyer} tickets:\t'))
+            tickets_bought = int(input(f'Please enter how many tickets are being bought. Make sure not to exceed the limit of {tickets_per_buyer} tickets:\t'))
         except ValueError:
 
             #I added multiple \n for emphasis
