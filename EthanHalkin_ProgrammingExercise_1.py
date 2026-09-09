@@ -9,20 +9,20 @@ def ticket_sale_loop(tickets_in_stock, tickets_per_buyer):
         tickets_in_stock (int): The amount of tickets left in stock
         tickets_per_buyer (int): The amount of tickets a buyer is allowed to buy
     Variables:
-        buyers (int): The number goes up every time a succesful sale is made
+        customers (int): The number goes up every time a succesful sale is made
         tickets_bought (int): Asks for the amount of tickets bought
     Logic:
         1. Inits the two main variables
         2. Activates while loop that repeats until tickets_in_stock drops to 0
         3. Asks for amount of tickets bought and checks if its valid.
         4. If valid, then it subtracts from tickets_in_stock and +=1 to accumulator
-        5. Loop closes upon reaching zero and returns the amount of buyers        
+        5. Loop closes upon reaching zero and returns the amount of customers        
     Return:
-        accumulator: The amount of buyers
+        accumulator: The amount of customers
 
     """
     #initializes the buyer amount
-    buyers = 0
+    customers = 0
 
     #initializes the input variable
     tickets_bought = 0
@@ -58,10 +58,10 @@ def ticket_sale_loop(tickets_in_stock, tickets_per_buyer):
         else:
             #subtracts from total, then adds to accumulator
             tickets_in_stock -= tickets_bought
-            buyers += 1
+            customers += 1
 
     #returns the accumulator
-    return buyers
+    return customers
 
 #abbreviated amount, should be fine
 def display_amount_of_buyers(amnt_displayed):
