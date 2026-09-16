@@ -24,7 +24,7 @@ def check_email(list_of_phrases, email):
     if email == None or email == '':
 
         print ('There is no email, please restart the program but with an email')
-        return
+        return None
 
     #loops phrases through email
     for phrase in list_of_phrases:
@@ -71,7 +71,8 @@ def spam_score_responses(score):
     Return:
         None
     """
-    if score >= 16: print(f'Your email contains {score} spam phrases. There is a high chance that this email is spam.')
+    if score == None: print('No email was given')
+    elif score >= 16: print(f'Your email contains {score} spam phrases. There is a high chance that this email is spam.')
     elif score >= 6: print(f'Your email contains {score} spam phrases. There is a medium chance this email is spam.')
     elif score > 0: print(f'Your email contains {score} spam phrases. There is a low chance this email is spam.')
     elif score == 0: print('There are no commonly used spam phrases in your email. Remember to stay safe out there.')
